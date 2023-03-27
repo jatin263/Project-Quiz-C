@@ -109,6 +109,8 @@ class student:
         self.Student_table.column("contact",width=150,)
         self.Student_table.column("dob",width=150,)
         self.Student_table.pack(fill=BOTH,expand=1)
+        self.Student_table.bind("<ButtonRelease-1>",self.get_cursor)
+
         self.fetch_data()
     def add_student(self):
         con=pymysql.connect(host="localhost",user="root",password="",database="stm")
@@ -137,12 +139,20 @@ class student:
          self.name_var.set("")
          self.email_var.set("")
          self.contact_var.set("")
-         self.dob_var.set.delete("")
+         self.dob_var.set("")
 
-    def get_cursor(self):
+    def get_cursor(self,ev):
          curosor_row=self.Student_table.focus()
          contents=self.Student_table.item(curosor_row)
          row=contents['values']
+         self.Roll_No_var.set(row[0])
+         self.name_var.set(row[1])
+         self.email_var.set(row[2])
+         self.contact_var.set(row[3])
+         self.dob_var.set(row[4])
+
+
+         
 
 
      

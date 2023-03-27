@@ -8,7 +8,7 @@ class student:
         self.root.title("UEM.Jaipur Student mobile number details")
         self.root.geometry("1350x700+0+0")
 
-        title=Label(self.root,text="UEM.Jaipur Student mobile number details",bd=10,relief=GROOVE,font=("times new roman",40,"bold"),bg="black",fg="blue")
+        title=Label(self.root,text="UEM.Jaipur Student Management System",bd=10,relief=GROOVE,font=("times new roman",40,"bold"),bg="black",fg="blue")
         title.pack(side=TOP,fill=X)
         self.Roll_No_var=StringVar()
         self.name_var=StringVar()

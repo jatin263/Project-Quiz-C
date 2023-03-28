@@ -38,7 +38,7 @@ class student:
         
         lbl_contact=Label(Manage_Frame,text="contact",bg="blue",fg="black",font=("times new roman",15,"bold"))
         lbl_contact.grid(row=3,column=0,pady=10,padx=20,sticky="w")
-
+        
         txt_contact=Entry(Manage_Frame,textvariable=self.contact_var,font=("times new roman",15,"bold"),bd=5,relief=GROOVE)
         txt_contact.grid(row=3,column=1,pady=10,padx=20,sticky="w")
 

@@ -61,12 +61,12 @@ class student:
 
 #====== Butoon Frame======
         btn_Frame=Frame(Manage_Frame,bd=4,relief=RIDGE,bg="black")
-        btn_Frame.place(x=10,y=400,width=430)
+        btn_Frame.place(x=100,y=400,width=230)
 
         Addbtn=Button(btn_Frame,text="Add",width=10,command=self.add_student).grid(row=0,column=0,padx=10,pady=10)
         updatebtn=Button(btn_Frame,text="update",width=10,command=self.update_data).grid(row=0,column=1,padx=10,pady=10)
-        clearbtn=Button(btn_Frame,text="clear",width=10,command=self.clear).grid(row=0,column=2,padx=10,pady=10)
-        deletebtn=Button(btn_Frame,text="delete",width=10,command=self.delete_data).grid(row=0,column=3,padx=10,pady=10)
+        clearbtn=Button(btn_Frame,text="clear",width=10,command=self.clear).grid(row=1,column=0,padx=10,pady=10)
+        deletebtn=Button(btn_Frame,text="delete",width=10,command=self.delete_data).grid(row=1,column=1,padx=10,pady=10)
         
 
 

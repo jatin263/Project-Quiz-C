@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Bill</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="drawer"></div>
+        <div class="home-login">
+            <h1>E-Receipt</h1>
+            <hr class="header-line">
+            <h3>Add Bills</h3><br>
+            <label><b>Choose Excel File:-</b></label>
+            <input type="file" oninput="fileName(this.value)"><br><br>
+            <div id="pp"></div><br>
+            <input type="submit" class="button-style" value="Login">
+        </div>
+    </div>
+    <footer>All rights are reserve</footer>
+    <script>
+        function fileName(name){
+            var ind = 0;
+            while(name.indexOf('\\',ind+1)>0){
+                ind=name.indexOf('\\',ind+1);
+            }
+            let file=name.slice(ind+1)
+            document.getElementById("pp").innerHTML="You have Select <br>"+file;
+        }
+    </script>
+</body>
+</html>
